@@ -37,6 +37,10 @@ Project Goals
 * Avoid using Python to simplify troubleshooting and installation. 
 * Append testfiles with new files without re-hashing existing files.
 
+Flow Chart
+--------
+![Flow Chart](https://raw.githubusercontent.com/artem-r-d/lunacopy/main/flowchart.png)
+
 Man Page
 --------
 
