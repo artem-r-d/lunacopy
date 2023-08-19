@@ -69,7 +69,7 @@ By following an approach similar to this one, IT professionals can mitigate pote
 
 Flow Chart
 --------
-![Flow Chart](https://raw.githubusercontent.com/artem-r-d/lunacopy/main/flowchart.png)
+![Flow Chart](https://raw.githubusercontent.com/artem-r-d/lunacopy/main/flow-chart.png)
 
 Man Page
 --------
