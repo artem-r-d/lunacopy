@@ -37,6 +37,36 @@ Project Goals
 * Avoid using Python to simplify troubleshooting and installation. 
 * Append testfiles with new files without re-hashing existing files.
 
+Solving File Integrity on Linux
+-------------
+LunaCopy can hash and verify thousands of files for checksum integrity by writing and checking text files. LunaCopy's functionality is too vast for a single line of bash script but is not complex to warrant a rewrite as a command line utility. 
+
+**Summary of File Integrity Testing and Resolution**
+
+When testing the integrity of files using hashing, it's essential to follow an established guideline based on technical principles of underlying technology, for example:
+
+1. **System Check**: 
+    - Before testing files, ensure that the hardware is in optimal condition.
+    - Verify storage condition using SMART "long" test, HD Sentinel surface test, or similar tools. 
+    - Test RAM with memtest86.
+    - If available, check CPU with manufacturer software. 
+    - As an IT expert, determine your criteria for a "fully functional, trusted" system.
+
+2. **File Verification**: 
+    - Ensure files to be tested aren't already corrupt. 
+    - Be wary of old files from outdated devices, partial downloads, or files from unchecked systems. 
+    - Tools like "czkawka" can help detect corrupt image files. 
+    - Remember, file recovery is a different subject.
+
+3. **Hash Testing**: 
+    - Once confident in your files' quality, use a script or a utility to record their hash all at once.
+    - Hashes are binary: they either match or they don't. 
+    - If a file fails its hash test, it means the file has been altered. Reasons could range from magnetic effects on HDDs, electrical issues on SSDs, or even external factors like solar radiation on RAM. Outside of external factors, file modification may happen both intentionally and unintentionally by both people and software.
+    - Investigate any changes in files and check for updates, movements, or modifications by other software. 
+    - If the file has no logical reason for change, deem it corrupted. Restore from backup or try to repair.
+
+By following an approach similar to this one, IT professionals can mitigate potential damages from corrupted data.
+
 Flow Chart
 --------
 ![Flow Chart](https://raw.githubusercontent.com/artem-r-d/lunacopy/main/flowchart.png)
