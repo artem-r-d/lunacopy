@@ -133,5 +133,9 @@ Changelog
 
 *Short changelog - for all the details look at the git log.*
 
+v1.0.1, 2023-08-26
+* Fixed: grep unexpected argument during new file append
+* Fixed: grep mistakenly adding existing filenames with "[" or "]" during new file append
+  
 v1.0.0, 2023-08-18
 * Initial release
