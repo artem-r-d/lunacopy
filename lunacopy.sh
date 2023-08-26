@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Version 1.0.0
+# Version 1.0.1
 # MIT License
 # Copyright 2023 Artem R. D., https://github.com/artem-r-d
 # Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
@@ -11,7 +11,7 @@
 set -e
 
 # Debugging purposes
-#-x
+#set -x
 
 # Trap any error and print a message indicating on which line the error occurred.
 trap 'echo "Error at line $LINENO"' ERR
@@ -85,7 +85,7 @@ case $action in
                             filename=$(basename "$file")
 
                             # Check if the file already has a hash in the testfile.
-                            hash=$(grep -w "$filename" "$path/${name}.$ext" | awk '{print $1}')
+                            hash=$(grep -wF -- "$filename" "$path/${name}.$ext" | awk '{print $1}')
                             if [ -n "$hash" ]; then
                                 continue
                             fi
